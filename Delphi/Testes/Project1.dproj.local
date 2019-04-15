@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/02/07 12:35:32.000.589,=C:\Users\João Pedro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/02/07 12:36:52.000.667,C:\Users\João Pedro\Desktop\Delphi\Testes\Unit1.pas=C:\Users\João Pedro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/02/07 12:36:52.000.667,C:\Users\João Pedro\Desktop\Delphi\Testes\Unit1.dfm=C:\Users\João Pedro\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2019/02/07 12:36:57.000.417,C:\Users\João Pedro\Desktop\Delphi\Testes\Project1.dproj=C:\Users\João Pedro\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2019/02/07 12:37:18.000.215,=C:\Users\João Pedro\Desktop\Delphi\Testes\Unit2.pas</Transaction>
+    <Transaction>2019/02/07 12:37:32.000.324,=C:\Users\João Pedro\Desktop\Delphi\Testes\Unit2.pas</Transaction>
+    <Transaction>2019/02/07 17:52:56.000.414,=C:\Users\João Pedro\Desktop\Delphi\Testes\Unit3.pas</Transaction>
+    <Transaction>2019/02/07 18:39:39.000.221,=C:\Users\João Pedro\Desktop\Delphi\Testes\Unit4.pas</Transaction>
+    <Transaction>2019/02/07 18:40:16.000.001,C:\Users\João Pedro\Desktop\Delphi\Testes\Unit4.pas=C:\Users\João Pedro\Desktop\Delphi\Testes\DModule.pas</Transaction>
+    <Transaction>2019/02/07 18:40:16.000.001,C:\Users\João Pedro\Desktop\Delphi\Testes\Unit4.dfm=C:\Users\João Pedro\Desktop\Delphi\Testes\DModule.dfm</Transaction>
+    <Transaction>2019/02/07 18:42:16.000.338,C:\Users\João Pedro\Desktop\Delphi\Testes\Unit1.dfm=C:\Users\João Pedro\Desktop\Delphi\Testes\Inicio.dfm</Transaction>
+    <Transaction>2019/02/07 18:42:16.000.338,C:\Users\João Pedro\Desktop\Delphi\Testes\Unit1.pas=C:\Users\João Pedro\Desktop\Delphi\Testes\Inicio.pas</Transaction>
+    <Transaction>2019/02/07 18:42:41.000.847,C:\Users\João Pedro\Desktop\Delphi\Testes\Unit2.pas=C:\Users\João Pedro\Desktop\Delphi\Testes\CadastroPessoas.pas</Transaction>
+    <Transaction>2019/02/07 18:42:41.000.847,C:\Users\João Pedro\Desktop\Delphi\Testes\Unit2.dfm=C:\Users\João Pedro\Desktop\Delphi\Testes\CadastroPessoas.dfm</Transaction>
+    <Transaction>2019/02/07 18:42:58.000.229,C:\Users\João Pedro\Desktop\Delphi\Testes\Unit3.dfm=C:\Users\João Pedro\Desktop\Delphi\Testes\ConsultaPessoas.dfm</Transaction>
+    <Transaction>2019/02/07 18:42:58.000.229,C:\Users\João Pedro\Desktop\Delphi\Testes\Unit3.pas=C:\Users\João Pedro\Desktop\Delphi\Testes\ConsultaPessoas.pas</Transaction>
+    <Transaction>2019/02/11 18:07:58.000.461,=C:\Users\João Pedro\Desktop\Delphi\Testes\Unit4.pas</Transaction>
+    <Transaction>2019/02/14 16:01:35.000.038,C:\Users\João Pedro\Desktop\Delphi\Testes\Unit4.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

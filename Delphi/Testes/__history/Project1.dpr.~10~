@@ -1,0 +1,19 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  Inicio in 'Inicio.pas' {Form1},
+  CadastroPessoas in 'CadastroPessoas.pas' {Form2},
+  ConsultaPessoas in 'ConsultaPessoas.pas' {Form3},
+  DModule in 'DModule.pas' {DM: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TDM, DM);
+  Application.Run;
+end.

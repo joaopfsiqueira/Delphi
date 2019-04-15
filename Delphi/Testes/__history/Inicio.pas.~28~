@@ -1,0 +1,79 @@
+unit Inicio;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ComCtrls, Vcl.ExtCtrls,
+  Vcl.MPlayer;
+
+type
+  TForm1 = class(TForm)
+    MainMenu1: TMainMenu;
+    Cadastro1: TMenuItem;
+    Pessoas1: TMenuItem;
+    Pesquisar1: TMenuItem;
+    PageControl1: TPageControl;
+    Pessoas2: TMenuItem;
+    Processos1: TMenuItem;
+    procedure Pessoas1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Pessoas2Click(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+uses CadastroPessoas, ConsultaPessoas, DModule;
+
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+      DM.BDDelphi.Close;
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+     DM.BDDelphi.Open;
+end;
+
+procedure TForm1.Pessoas1Click(Sender: TObject);
+var
+  TabSheet: TTabSheet;
+begin
+     try
+        TabSheet := TTabSheet.Create(PageControl1);
+        Form2    := TForm2.Create(Self);
+       try
+          TabSheet.Caption := 'Cadastro de Pessoas';
+          TabSheet.PageControl := PageControl1;
+          Form2.Parent := TabSheet;
+          Form2.ShowModal;
+       finally
+          FreeAndNil(TabSheet);
+          FreeAndNil(Form2);
+       end;
+     except
+        on E:Exception do
+           ShowMessage('Erro ao tentar abrir formulário: '+ E.Message);
+     end;
+end;
+
+procedure TForm1.Pessoas2Click(Sender: TObject);
+begin
+     if FrmConsulta=nil then
+     FrmConsulta:=TFrmConsulta.Create(Self);
+     FrmConsulta.Show
+end;
+
+end.

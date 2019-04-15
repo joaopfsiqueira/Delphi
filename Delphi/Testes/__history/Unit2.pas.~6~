@@ -1,0 +1,57 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Data.DB, Data.Win.ADODB,
+  Vcl.Mask, Vcl.DBCtrls;
+
+type
+  TForm2 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    ComboBox1: TComboBox;
+    Button1: TButton;
+    ADOConnection1: TADOConnection;
+    SqlNOME: TADODataSet;
+    SqlNOMECIDADE: TStringField;
+    SqlNOMEUF: TStringField;
+    SqlNOMENOME: TStringField;
+    SqlNOMESOBRENOME: TStringField;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    DTSNome: TDataSource;
+    SqlCIDADE: TADODataSet;
+    DTSCidade: TDataSource;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TForm2.Button1Click(Sender: TObject);
+begin
+    Nome
+end;
+
+procedure TForm2.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+     Action:=caFree;
+     Form2:=nil;
+end;
+
+end.

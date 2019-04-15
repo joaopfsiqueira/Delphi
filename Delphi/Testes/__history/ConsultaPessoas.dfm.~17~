@@ -1,0 +1,149 @@
+﻿object FrmConsulta: TFrmConsulta
+  Left = 0
+  Top = 0
+  Caption = 'FrmConsulta'
+  ClientHeight = 372
+  ClientWidth = 670
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  Visible = True
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Button1: TButton
+    Left = 248
+    Top = 8
+    Width = 91
+    Height = 25
+    Caption = 'Editar Cadastro'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 587
+    Top = 8
+    Width = 75
+    Height = 25
+    Caption = 'Excluir'
+    TabOrder = 1
+    OnClick = Button2Click
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 670
+    Height = 372
+    ActivePage = TabSheet1
+    Align = alClient
+    TabOrder = 2
+    ExplicitHeight = 299
+    object TabSheet1: TTabSheet
+      Caption = 'Consulta por nome'
+      ExplicitHeight = 271
+      object Panel1: TPanel
+        Left = 0
+        Top = 0
+        Width = 662
+        Height = 49
+        Align = alTop
+        TabOrder = 0
+        object Label1: TLabel
+          Left = 0
+          Top = 15
+          Width = 117
+          Height = 13
+          Caption = 'Digite o Nome do Cliente'
+        end
+        object Edit1: TEdit
+          Left = 123
+          Top = 15
+          Width = 225
+          Height = 21
+          TabOrder = 0
+          OnChange = Edit1Change
+        end
+        object Button3: TButton
+          Left = 583
+          Top = 15
+          Width = 75
+          Height = 25
+          Align = alCustom
+          Caption = 'Excluir'
+          TabOrder = 1
+          OnClick = Button3Click
+        end
+      end
+      object DBGrid1: TDBGrid
+        Left = 0
+        Top = 48
+        Width = 662
+        Height = 296
+        Align = alBottom
+        DataSource = DTSPessoas
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+        TabOrder = 1
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+      end
+    end
+  end
+  object SqlPessoas: TADODataSet
+    Connection = DM.BDDelphi
+    CursorType = ctStatic
+    CommandText = 'select * from tabPessoas'
+    DataSource = DTSPessoas
+    Parameters = <>
+    Left = 184
+    Top = 184
+    object SqlPessoasidPessoa: TAutoIncField
+      FieldName = 'idPessoa'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object SqlPessoasNome: TStringField
+      FieldName = 'Nome'
+      ProviderFlags = [pfInUpdate]
+      Size = 80
+    end
+    object SqlPessoasProfissão: TStringField
+      FieldName = 'Profiss'#227'o'
+      ProviderFlags = [pfInUpdate]
+      Size = 80
+    end
+    object SqlPessoasCidade: TStringField
+      FieldName = 'Cidade'
+      ProviderFlags = [pfInUpdate]
+      Size = 80
+    end
+    object SqlPessoasUF: TStringField
+      FieldName = 'UF'
+      ProviderFlags = [pfInUpdate]
+      Size = 2
+    end
+    object SqlPessoasEmail: TStringField
+      FieldName = 'Email'
+      ProviderFlags = [pfInUpdate]
+      Size = 100
+    end
+    object SqlPessoasObservações: TMemoField
+      FieldName = 'Observa'#231#245'es'
+      ProviderFlags = [pfInUpdate]
+      BlobType = ftMemo
+    end
+  end
+  object DTSPessoas: TDataSource
+    DataSet = DM.QNome
+    Left = 152
+    Top = 184
+  end
+end

@@ -1,0 +1,237 @@
+﻿object Form2: TForm2
+  Left = 0
+  Top = 0
+  Align = alClient
+  Caption = 'Form2'
+  ClientHeight = 425
+  ClientWidth = 581
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  PrintScale = poNone
+  Visible = True
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label2: TLabel
+    Left = 32
+    Top = 16
+    Width = 33
+    Height = 16
+    Caption = 'Nome'
+    FocusControl = DBEdit2
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 32
+    Top = 85
+    Width = 52
+    Height = 16
+    Caption = 'Profiss'#227'o'
+    FocusControl = DBEdit3
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 32
+    Top = 152
+    Width = 39
+    Height = 16
+    Caption = 'Cidade'
+    FocusControl = DBEdit4
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 304
+    Top = 152
+    Width = 15
+    Height = 16
+    Caption = 'UF'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 304
+    Top = 16
+    Width = 31
+    Height = 16
+    Caption = 'Email'
+    FocusControl = DBEdit6
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 32
+    Top = 229
+    Width = 73
+    Height = 16
+    Caption = 'Observa'#231#245'es'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 193
+    Top = 383
+    Width = 155
+    Height = 25
+    Caption = 'Cadastrar'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object DBEdit2: TDBEdit
+    Left = 32
+    Top = 35
+    Width = 241
+    Height = 21
+    DataField = 'Nome'
+    DataSource = DTSPessoas
+    TabOrder = 1
+  end
+  object DBEdit3: TDBEdit
+    Left = 32
+    Top = 104
+    Width = 241
+    Height = 21
+    DataField = 'Profiss'#227'o'
+    DataSource = DTSPessoas
+    TabOrder = 2
+  end
+  object DBEdit4: TDBEdit
+    Left = 32
+    Top = 171
+    Width = 241
+    Height = 21
+    DataField = 'Cidade'
+    DataSource = DTSPessoas
+    TabOrder = 3
+  end
+  object DBEdit6: TDBEdit
+    Left = 304
+    Top = 35
+    Width = 241
+    Height = 21
+    DataField = 'Email'
+    DataSource = DTSPessoas
+    TabOrder = 4
+  end
+  object DBComboBox1: TDBComboBox
+    Left = 304
+    Top = 171
+    Width = 89
+    Height = 21
+    DataField = 'UF'
+    DataSource = DTSPessoas
+    Items.Strings = (
+      'AC'
+      'AL'
+      'AP'
+      'AM'
+      'BA'
+      'CE'
+      'DF'
+      'ES'
+      'GO'
+      'MA'
+      'MT'
+      'MS'
+      'MG'
+      'PA'
+      'PB'
+      'PR'
+      'PE'
+      'PI'
+      'RJ'
+      'RN'
+      'RS'
+      'RO'
+      'RR'
+      'SC'
+      'SP'
+      'SE'
+      'TO')
+    TabOrder = 5
+  end
+  object DBMemo1: TDBMemo
+    Left = 32
+    Top = 251
+    Width = 513
+    Height = 89
+    DataField = 'Observa'#231#245'es'
+    DataSource = DTSPessoas
+    TabOrder = 6
+  end
+  object SqlPessoas: TADODataSet
+    Connection = DM.BDDelphi
+    CursorType = ctStatic
+    CommandText = 'Select * from tabpessoas'
+    Parameters = <>
+    Left = 432
+    Top = 384
+    object SqlPessoasidPessoa: TAutoIncField
+      FieldName = 'idPessoa'
+      ReadOnly = True
+    end
+    object SqlPessoasNome: TStringField
+      FieldName = 'Nome'
+      Size = 80
+    end
+    object SqlPessoasCidade: TStringField
+      FieldName = 'Cidade'
+      Size = 80
+    end
+    object SqlPessoasUF: TStringField
+      FieldName = 'UF'
+      Size = 2
+    end
+    object SqlPessoasEmail: TStringField
+      FieldName = 'Email'
+      Size = 100
+    end
+    object SqlPessoasProfissão: TStringField
+      FieldName = 'Profiss'#227'o'
+      Size = 80
+    end
+    object SqlPessoasObservacoes: TMemoField
+      FieldName = 'Observacoes'
+      BlobType = ftMemo
+    end
+  end
+  object DTSPessoas: TDataSource
+    AutoEdit = False
+    DataSet = SqlPessoas
+    Left = 400
+    Top = 384
+  end
+end

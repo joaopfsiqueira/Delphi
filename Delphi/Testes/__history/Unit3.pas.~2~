@@ -1,0 +1,46 @@
+unit Unit3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Data.Win.ADODB, Vcl.Grids,
+  Vcl.DBGrids;
+
+type
+  TForm3 = class(TForm)
+    DBGrid1: TDBGrid;
+    ADOConnection1: TADOConnection;
+    ADODataSet1: TADODataSet;
+    DataSource1: TDataSource;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm3.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+     SqlPessoas.close;
+     BDDelphi.Close;
+     Action:=caFree;
+     Form3:=nil;
+end;
+
+procedure TForm3.FormShow(Sender: TObject);
+begin
+     BDDelphi.open;
+     SqlPessoas.Open;
+     SqlPessoas.Insert;
+end;
+
+end.
